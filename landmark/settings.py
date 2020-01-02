@@ -25,7 +25,7 @@ SECRET_KEY = 'wut-^0^$-(9)f@-c3r(4lb!d06(h=ybvalfepgzuj-^q4i-1wf'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -69,6 +69,13 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'landmark.wsgi.application'
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static'),
+)
+
+STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 
 
 # Database
