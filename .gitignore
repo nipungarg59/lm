@@ -1,0 +1,9 @@
+*.pyc
+
+node_modules
+
+.idea
+
+venv
+
+*.sqlite3
